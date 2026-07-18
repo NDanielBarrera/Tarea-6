@@ -44,7 +44,8 @@ function Usuarios() {
 
   if (loading) {
     return (
-      <section>
+      <section className="estado estado-cargando">
+        <div className="spinner"></div>
         <p>Cargando usuarios...</p>
       </section>
     );
@@ -52,7 +53,8 @@ function Usuarios() {
 
   if (error) {
     return (
-      <section>
+      <section className="estado estado-error">
+        <h2>No fue posible cargar los usuarios</h2>
         <p>{error}</p>
       </section>
     );

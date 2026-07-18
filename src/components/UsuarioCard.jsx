@@ -1,41 +1,43 @@
+import "./UsuarioCard.css";
+
 function UsuarioCard({ usuario }) {
-  return (
-    <li className="usuario-card">
-      <h3 className="usuario-nombre">
-        {usuario.name}
-      </h3>
 
-      <p className="usuario-alias">
-        @{usuario.username}
-      </p>
+    return (
 
-      <dl className="usuario-datos">
-        <div>
-          <dt>Correo</dt>
-          <dd>
-            <a href={`mailto:${usuario.email}`}>
-              {usuario.email}
-            </a>
-          </dd>
-        </div>
+        <li className="usuario-card">
 
-        <div>
-          <dt>Teléfono</dt>
-          <dd>{usuario.phone}</dd>
-        </div>
+            <h3>{usuario.name}</h3>
 
-        <div>
-          <dt>Ciudad</dt>
-          <dd>{usuario.address.city}</dd>
-        </div>
+            <p>
+                <span>Usuario:</span> @{usuario.username}
+            </p>
 
-        <div>
-          <dt>Empresa</dt>
-          <dd>{usuario.company.name}</dd>
-        </div>
-      </dl>
-    </li>
-  );
+            <p>
+                <span>Correo:</span><br />
+                <a href={`mailto:${usuario.email}`}>
+                    {usuario.email}
+                </a>
+            </p>
+
+            <p>
+                <span>Teléfono:</span><br />
+                {usuario.phone}
+            </p>
+
+            <p>
+                <span>Ciudad:</span><br />
+                {usuario.address.city}
+            </p>
+
+            <p>
+                <span>Empresa:</span><br />
+                {usuario.company.name}
+            </p>
+
+        </li>
+
+    );
+
 }
 
 export default UsuarioCard;

@@ -1,0 +1,45 @@
+.usuario-card {
+  display: flex;
+  min-height: 285px;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 7px 20px rgba(15, 23, 42, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.usuario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+}
+
+.usuario-card h3 {
+  margin: 0 0 16px;
+  color: #1e3a8a;
+  font-size: 1.25rem;
+}
+
+.usuario-card p {
+  margin: 7px 0;
+  color: #475569;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.usuario-card span {
+  color: #111827;
+  font-weight: 700;
+}
+
+.usuario-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.usuario-card a:hover {
+  text-decoration: underline;
+}
