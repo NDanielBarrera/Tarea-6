@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UsuarioCard from "./UsuarioCard.jsx";
 
 function Usuarios() {
   const [usuarios, setUsuarios] = useState([]);
@@ -60,15 +61,14 @@ function Usuarios() {
   return (
     <section>
       <h2>Usuarios</h2>
-
-      <ul>
-        {usuarios.map((usuario) => (
-          <li key={usuario.id}>
-            <strong>{usuario.name}</strong>
-            <p>{usuario.email}</p>
-          </li>
-        ))}
-      </ul>
+        <ul className="usuarios-lista">
+          {usuarios.map((usuario) => (
+            <UsuarioCard
+              key={usuario.id}
+              usuario={usuario}
+            />
+          ))}
+        </ul>
     </section>
   );
 }
